@@ -1,0 +1,253 @@
+/*Import font from gooogle fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f8fd;
+    font-size: 16px;
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(58, 58, 58);
+    text-decoration: underline;
+}
+
+header{
+    background-color: #65bc8a;
+    border-bottom: 2px solid rgb(151, 151, 151);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none; 
+}
+
+nav ul li{
+    padding: 10px;
+}
+
+.logo{
+    max-width: 100px;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sidebar{
+    width: 20%;
+    padding: 10px;
+    border-right: 1px solid rgb(151, 151, 151);
+}
+
+.sidebar h2{
+    color: #387a53;
+    font-size: 1.2em;
+}
+
+.sidebar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#recent-posts li{
+    padding-bottom: 15px;
+    font-size: 0.9em;
+    
+}
+
+#important-links li a{
+    color: #387a53;
+    padding-bottom: 15px;
+    font-size: 0.9em;
+}
+
+
+.content{
+    margin-left: 5%;
+    width: 70%;
+    padding: 10px;
+
+}
+
+
+.blog-loop{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.blog-loop article{
+    border: 1px solid rgb(151, 151, 151);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.single img{
+    max-width: 100%;
+}
+
+.single .main-tags{
+    font-size: 0.8em;
+}
+
+.single .main-tags a{
+    color: #387a53;
+}
+
+.single h3 {
+    font-size: 1.1em;
+    color: #173d27;
+}
+
+.single .summary{
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.single .submit-date{
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.single .read-more {
+    text-align: right;
+}
+
+.single .read-more a{
+    color: #387a53;
+    text-decoration: underline;
+    font-size: 0.9em;
+    margin-top: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.single .read-more a:hover{
+    opacity: 0.7;
+}
+.more {
+    display: flex;
+    justify-content: center;
+}
+.more button{
+    background-color: #387a53;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+footer{
+    background-color: #65bc8a;
+    text-align: center;
+}
+
+.comment-form{
+    margin-top: 20px;
+
+}
+
+.comment-from input, textarea
+{
+    width: 100%;
+    background-color: #f4f8fd;
+    border: #173d27 1px soild;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.comment-from  button{
+    background-color: #387a53;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);  
+    border: 1px solid rgb(151, 151, 151);
+    grid-auto-rows: minmax(50px, auto);
+    align-content: center;
+}
+
+.grid .header{
+    background-color: #65bc8a;
+}
+
+.grid div{
+    border: 1px solid rgb(151, 151, 151);
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* responsive design */
+@media screen and (max-width: 1000px){
+    .blog-loop{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .main-content{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        border-right: none;
+        order: 2; /*to chnage order Ordering Elements with Flexbox        */
+    }
+
+    .content{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .blog-loop{
+        grid-template-columns: 1fr;
+    }
+}
